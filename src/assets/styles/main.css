@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterTight-Variable-subset.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/InterTight-Italic-Variable-subset.woff2')
+    format('woff2');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Geist Mono', monospace;
+  font-family: 'Inter Tight', system-ui;
+}
+
+* {
+  box-sizing: border-box;
+
+  &:focus-visible {
+    border-radius: 2rem;
+    outline: solid 2px black;
+    outline-offset: 0.5rem;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 900;
+  text-wrap: balance;
+}
+
+h2 {
+  text-transform: capitalize;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+.pane-title {
+  opacity: 0;
+}
+
+.arrow {
+  display: inline-block;
+  opacity: 0;
+  font-size: 2rem;
+}
+
+main {
+  scroll-snap-type: block mandatory;
+  height: 100dvh;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.pane {
+  padding: 5dvw;
+  height: 100dvh;
+  scroll-snap-align: start;
+  opacity: 0;
+}
+
+.feature {
+  padding: 5dvw;
+}
+
+.feature-title {
+  color: var(--text);
+}
+
+.feature-description {
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.inner-pane {
+  align-content: center;
+  text-align: center;
+  background: linear-gradient(
+    50deg,
+    var(--background--one),
+    var(--background--two)
+  );
+  border-radius: 4rem;
+  height: 100%;
+  position: relative;
+  padding: 1rem;
+
+  a {
+    color: var(--link);
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+.scroll-cta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  border: none;
+  background: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.feature-link,
+.back-link {
+  color: var(--link);
+  font-weight: 500;
+  text-decoration-thickness: 2px;
+  font-size: 1.25rem;
+}
+
+.back-link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@view-transition {
+  navigation: auto;
+}
