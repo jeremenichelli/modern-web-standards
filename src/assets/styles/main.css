@@ -82,6 +82,7 @@ main {
   color: var(--text);
   font-size: 1.5rem;
   line-height: 1.25;
+  margin-block: 2rem;
 }
 
 .inner-pane {
