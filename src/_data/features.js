@@ -24,6 +24,14 @@ export default [
     linkLabel: 'CSS scroll snap on MDN',
   },
   {
+    id: 'intersection-observer',
+    name: 'Intersection Observer',
+    description:
+      'The new Intersection Observer interface is here as a response of developers trying to figure out the best way to detect when an element enters the viewport. Doing this is useful in a lot of cases like infinite scrolling, lazy loading images or animating content.',
+    link: 'https://jeremias.codes/2016/04/quick-introduction-to-the-intersection-observer-api/',
+    linkLabel: 'Quick introduction to the Intersection Observer API on jeremias.codes',
+  },
+  {
     id: 'web-animation',
     name: 'Web Animation API',
     description:
