@@ -51,6 +51,7 @@ h2 {
 }
 
 .arrow {
+  color: var(--link);
   display: inline-block;
   opacity: 0;
   font-size: 2rem;
@@ -106,6 +107,7 @@ main {
 }
 
 .scroll-cta {
+  color: var(--link);
   position: absolute;
   left: 0;
   right: 0;
